@@ -29,7 +29,7 @@ export const AuthZPaymentPage = (props: AuthZPaymentPageProps) => {
         eventService.updates(response!.id)
             .then((event) => {
                 setEvent(event);
-            }).catch((error) => {
+            }).catch((_error) => {
 
             }).finally(() => {
 

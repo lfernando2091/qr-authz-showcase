@@ -1,5 +1,5 @@
 import {type IDetectedBarcode, Scanner} from '@yudiel/react-qr-scanner';
-import {useMemo, useState} from "react";
+import {useState} from "react";
 import {EventService} from "../../service/event.service.ts";
 
 export const ScannerPage = () => {
