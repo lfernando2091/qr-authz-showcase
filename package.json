@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build:dev": "tsc -b && vite build  --base=/react-m3 --sourcemap=true --mode development",
-    "build": "tsc -b && vite build  --base=/react-m3",
+    "build:dev": "tsc -b && vite build  --base=/qr-authz-showcase --sourcemap=true --mode development",
+    "build": "tsc -b && vite build  --base=/qr-authz-showcase",
     "lint": "eslint .",
     "preview": "vite preview"
   },
