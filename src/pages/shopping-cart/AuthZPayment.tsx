@@ -1,4 +1,3 @@
-import "./AuthZPaymentPage.css"
 import {Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Skeleton} from "@mui/material";
 import type {AuthZStatusType} from "./AuthZModels.ts";
 import {type Event, type EventCreateResponse, EventService} from "../../service/event.service.ts";
