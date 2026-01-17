@@ -15,7 +15,7 @@ export function App() {
     return (
         <ThemeProvider theme={m3Theme}>
             <CssBaseline enableColorScheme />
-            <BrowserRouter>
+            <BrowserRouter basename={import.meta.env.BASE_URL}>
                 <Router/>
             </BrowserRouter>
         </ThemeProvider>
