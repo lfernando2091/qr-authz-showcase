@@ -1,9 +1,4 @@
-
-// const BASE_URL = "http://localhost:3333";
 import {QRAuthZApiError} from "../error/error.model.ts";
-
-const BASE_URL = "https://6h90slf5-3333.usw3.devtunnels.ms";
-
 
 export interface Event {
     status: string;
@@ -31,7 +26,7 @@ export class EventService {
     }
 
     async updates(id: string): Promise<Event> {
-        this.eventSource = new EventSource(`${BASE_URL}/api/v1/event/updates/${id}`);
+        this.eventSource = new EventSource(`${import.meta.env.VITE_API_URL}/api/v1/event/updates/${id}`);
         return new Promise<Event>((resolve, reject) => {
             // Handling the specific "close" event sent by the server
             this.eventSource!.addEventListener('close', (event) => {
@@ -62,7 +57,7 @@ export class EventService {
         };
         const query = new URLSearchParams();
         query.set('responseType', 'base64png');
-        const url = new URL(`${BASE_URL}/api/v1/event`);
+        const url = new URL(`${import.meta.env.VITE_API_URL}/api/v1/event`);
         url.search = query.toString();
         const response = await fetch(url, {
             method: 'POST',
@@ -82,7 +77,7 @@ export class EventService {
             authorizerId: "my_user_id",
             metadata
         };
-        const response = await fetch(`${BASE_URL}/api/v1/event/authorize/${id}`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/event/authorize/${id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
