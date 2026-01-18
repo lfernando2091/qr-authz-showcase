@@ -5,7 +5,7 @@ import {useApi} from "../../service/api.hook.tsx";
 import {useEffect, useState} from "react";
 
 const eventService = new EventService();
-const APP_ID = "6963124de3fd9dce56d79485";
+const APP_ID = "696d594cb1fad2e12535a74b";
 
 export interface AuthZPaymentPageProps {
     open: boolean;
